@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+warehouse/*.duckdb
+models_store/*.parquet
+models_store/*.joblib
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+.streamlit/secrets.toml
+*.db
+.DS_Store
