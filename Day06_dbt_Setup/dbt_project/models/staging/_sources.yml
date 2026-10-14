@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    description: >
+      Landing zone loaded directly from the M5-format CSVs (calendar.csv,
+      sell_prices.csv, sales_train_validation.csv) by src/extract_load.py.
+      No cleaning happens here - see the staging models for that.
+    schema: raw
+    tables:
+      - name: calendar
+        description: One row per calendar day, with events and SNAP flags.
+      - name: sell_prices
+        description: Weekly selling price per store-item.
+      - name: sales_train_validation
+        description: Wide daily unit sales, one row per store-item, one column per day (d_1, d_2, ...).

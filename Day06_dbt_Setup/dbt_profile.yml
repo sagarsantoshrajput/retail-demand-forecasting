@@ -1,0 +1,10 @@
+# Copy this file to ~/.dbt/profiles.yml (Windows: %USERPROFILE%\.dbt\profiles.yml).
+# Reads WAREHOUSE_PATH from the environment, so no local paths need editing.
+retail_demand:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('WAREHOUSE_PATH') }}"
+      schema: main
+      threads: 4
