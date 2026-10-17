@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_calendar
+    description: Typed, renamed calendar - one row per date.
+    columns:
+      - name: calendar_date
+        tests: [not_null, unique]
+  - name: stg_sell_prices
+    description: Typed weekly sell prices per store-item, nulls/non-positive prices filtered.
+    columns:
+      - name: sell_price
+        tests: [not_null]
+  - name: stg_sales
+    description: Unpivoted daily unit sales - one row per (store-item, day).
+    columns:
+      - name: units_sold
+        tests: [not_null]
