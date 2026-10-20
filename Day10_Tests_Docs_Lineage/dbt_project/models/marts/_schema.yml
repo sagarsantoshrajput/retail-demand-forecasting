@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: mart_sales_daily
+    description: >
+      Analysis-ready daily grain: one row per (store, item, date), enriched
+      with calendar, event and price context. Feeds both the forecasting
+      pipeline (Week 3) and the Streamlit app (Week 4).
+    columns:
+      - name: series_id
+        description: Concatenated item-store-validation id (matches M5's `id` column).
+        tests: [not_null]
+      - name: item_id
+        tests: [not_null]
+      - name: store_id
+        tests: [not_null]
+      - name: calendar_date
+        tests: [not_null]
+      - name: units_sold
+        description: Units sold that day for that store-item.
+        tests: [not_null]
+
+  - name: mart_sales_weekly
+    description: Weekly rollup of mart_sales_daily, one row per store-item-week.
+    columns:
+      - name: units_sold
+        tests: [not_null]
+
+  - name: mart_sales_monthly
+    description: Monthly rollup of mart_sales_daily, one row per store-item-month.
+    columns:
+      - name: units_sold
+        tests: [not_null]
+
+  - name: mart_item_store_summary
+    description: >
+      One row per store-item with lifetime volume stats - used to rank items
+      by volume (Prophet vs. LightGBM routing) and to populate the Streamlit
+      store/category selectors.
+    columns:
+      - name: store_id
+        tests: [not_null]
+      - name: item_id
+        tests: [not_null]
+      - name: total_units
+        tests: [not_null]
