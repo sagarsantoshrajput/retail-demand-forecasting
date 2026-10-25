@@ -1,0 +1,3 @@
+model,avg_wmape
+lightgbm,0.4202802828574322
+prophet,0.27789487877602564
