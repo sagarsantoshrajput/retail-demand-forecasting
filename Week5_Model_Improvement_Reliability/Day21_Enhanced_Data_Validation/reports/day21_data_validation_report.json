@@ -1,0 +1,119 @@
+{
+    "project": "Retail Demand Forecasting",
+    "validation": "Day 21 Enhanced Data Validation",
+    "overall_status": "PASS",
+    "datasets": {
+        "calendar": {
+            "file": "calendar.csv",
+            "row_count": 1125,
+            "column_count": 12,
+            "status": "PASS",
+            "checks": {
+                "missing_dates": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "invalid_dates": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "duplicate_dates": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "missing_calendar_fields": {
+                    "issues": 0,
+                    "status": "PASS"
+                }
+            }
+        },
+        "sell_prices": {
+            "file": "sell_prices.csv",
+            "row_count": 23184,
+            "column_count": 4,
+            "status": "PASS",
+            "checks": {
+                "required_columns_present": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "missing_identifiers": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "invalid_or_missing_prices": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "non_positive_prices": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "duplicate_store_item_week": {
+                    "issues": 0,
+                    "status": "PASS"
+                }
+            }
+        },
+        "sales_train_validation": {
+            "file": "sales_train_validation.csv",
+            "row_count": 144,
+            "column_count": 1101,
+            "status": "PASS",
+            "checks": {
+                "required_columns_present": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "missing_identifiers": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "duplicate_product_ids": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "daily_sales_columns_present": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "invalid_or_missing_sales": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "negative_sales": {
+                    "issues": 0,
+                    "status": "PASS"
+                }
+            }
+        },
+        "actuals_holdout": {
+            "file": "actuals_holdout.csv",
+            "row_count": 30,
+            "column_count": 145,
+            "status": "PASS",
+            "checks": {
+                "missing_dates": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "duplicate_dates": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "product_columns_present": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "invalid_or_missing_actuals": {
+                    "issues": 0,
+                    "status": "PASS"
+                },
+                "negative_actuals": {
+                    "issues": 0,
+                    "status": "PASS"
+                }
+            }
+        }
+    }
+}
