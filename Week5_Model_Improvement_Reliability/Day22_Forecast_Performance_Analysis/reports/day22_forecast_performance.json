@@ -1,0 +1,38 @@
+{
+    "project": "Retail Demand Forecasting",
+    "analysis": "Day 22 Forecast Performance Analysis",
+    "evaluation_rows": 5400,
+    "overall_champion_by_wmape": "prophet",
+    "metric_definitions": {
+        "mae": "Mean Absolute Error; lower is better.",
+        "rmse": "Root Mean Squared Error; lower is better.",
+        "mape_pct": "Mean Absolute Percentage Error; zero actuals excluded.",
+        "wmape_pct": "Weighted Mean Absolute Percentage Error; lower is better.",
+        "forecast_bias": "Mean predicted minus actual; positive means overprediction.",
+        "forecast_bias_pct": "Total prediction error divided by total actuals, as percent."
+    },
+    "models": [
+        {
+            "row_count": 4320,
+            "mae": 5.1095632669862,
+            "rmse": 11.781313353618845,
+            "mape_pct": 50.7279456760821,
+            "wmape_pct": 28.829508670254533,
+            "forecast_bias": -0.9725246704913135,
+            "forecast_bias_pct": -5.487241659403741,
+            "model": "lightgbm",
+            "series_count": 144
+        },
+        {
+            "row_count": 1080,
+            "mae": 13.087678090381269,
+            "rmse": 22.022015742774848,
+            "mape_pct": 35.03599858806572,
+            "wmape_pct": 25.418451189778036,
+            "forecast_bias": -2.8437050203343084,
+            "forecast_bias_pct": -5.522948895772287,
+            "model": "prophet",
+            "series_count": 36
+        }
+    ]
+}
