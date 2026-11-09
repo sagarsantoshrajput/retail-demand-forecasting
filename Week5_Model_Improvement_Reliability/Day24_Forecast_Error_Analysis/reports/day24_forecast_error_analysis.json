@@ -1,0 +1,108 @@
+{
+    "source": "day22_series_performance.csv",
+    "records_analyzed": 180,
+    "unique_stores": 3,
+    "unique_products": 144,
+    "models_analyzed": [
+        "lightgbm",
+        "prophet"
+    ],
+    "highest_error_products": [
+        {
+            "store_id": "STORE_1",
+            "item_id": "HOBBIES_2_007",
+            "model_count": 1,
+            "avg_wmape_pct": 135.95516185022402,
+            "worst_wmape_pct": 135.95516185022402,
+            "avg_mae": 0.8610493583847522,
+            "avg_forecast_bias": 0.1863417442912087
+        },
+        {
+            "store_id": "STORE_3",
+            "item_id": "HOUSEHOLD_2_002",
+            "model_count": 1,
+            "avg_wmape_pct": 135.00030885748052,
+            "worst_wmape_pct": 135.00030885748052,
+            "avg_mae": 1.1250025738123377,
+            "avg_forecast_bias": 1.0356946338315487
+        },
+        {
+            "store_id": "STORE_3",
+            "item_id": "HOBBIES_2_007",
+            "model_count": 1,
+            "avg_wmape_pct": 124.37876350153594,
+            "worst_wmape_pct": 124.37876350153594,
+            "avg_mae": 0.5804342296738344,
+            "avg_forecast_bias": 0.2887678824683294
+        },
+        {
+            "store_id": "STORE_3",
+            "item_id": "HOBBIES_2_003",
+            "model_count": 1,
+            "avg_wmape_pct": 110.8187499955245,
+            "worst_wmape_pct": 110.8187499955245,
+            "avg_mae": 0.6279729166413055,
+            "avg_forecast_bias": 0.2485435840833282
+        },
+        {
+            "store_id": "STORE_3",
+            "item_id": "FOODS_2_007",
+            "model_count": 1,
+            "avg_wmape_pct": 103.82041410908084,
+            "worst_wmape_pct": 103.82041410908084,
+            "avg_mae": 1.764947039854374,
+            "avg_forecast_bias": 1.031952820030427
+        },
+        {
+            "store_id": "STORE_2",
+            "item_id": "HOBBIES_2_007",
+            "model_count": 1,
+            "avg_wmape_pct": 99.83482769512318,
+            "worst_wmape_pct": 99.83482769512318,
+            "avg_mae": 0.7321220697642367,
+            "avg_forecast_bias": 0.074962121497318
+        },
+        {
+            "store_id": "STORE_2",
+            "item_id": "HOBBIES_2_003",
+            "model_count": 1,
+            "avg_wmape_pct": 97.2823370725588,
+            "worst_wmape_pct": 97.2823370725588,
+            "avg_mae": 0.7134038051987645,
+            "avg_forecast_bias": 0.0841208189400722
+        },
+        {
+            "store_id": "STORE_3",
+            "item_id": "HOBBIES_1_001",
+            "model_count": 1,
+            "avg_wmape_pct": 84.01479294116916,
+            "worst_wmape_pct": 84.01479294116916,
+            "avg_mae": 2.3244092713723465,
+            "avg_forecast_bias": 2.311351604277613
+        },
+        {
+            "store_id": "STORE_1",
+            "item_id": "HOBBIES_2_003",
+            "model_count": 1,
+            "avg_wmape_pct": 82.44915331651981,
+            "worst_wmape_pct": 82.44915331651981,
+            "avg_mae": 0.9344237375872244,
+            "avg_forecast_bias": -0.3164255994828113
+        },
+        {
+            "store_id": "STORE_1",
+            "item_id": "HOUSEHOLD_2_002",
+            "model_count": 1,
+            "avg_wmape_pct": 77.93997679540672,
+            "worst_wmape_pct": 77.93997679540672,
+            "avg_mae": 0.9872397060751518,
+            "avg_forecast_bias": 0.3727815620411938
+        }
+    ],
+    "recommendations": [
+        "60 model-series records have high WMAPE (40% or above). Prioritize these records for model and feature investigation.",
+        "95 model-series records show underforecasting. Review demand spikes, promotions, seasonality and lag features.",
+        "85 model-series records show overforecasting. Review excess forecast patterns, event effects and recent demand trends.",
+        "Store STORE_3 has the highest average WMAPE (40.52%). Review its product-level forecasts."
+    ]
+}
