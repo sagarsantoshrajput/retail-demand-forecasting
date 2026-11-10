@@ -1,0 +1,4 @@
+store_id,product_count,avg_daily_demand,reorder_required,stock_data_missing,high_stockout_risk
+STORE_1,48,16.78,0,48,0
+STORE_2,48,17.4,0,48,0
+STORE_3,48,16.71,0,48,0
